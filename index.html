@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f5">
+  <title>لدلوعتي وحدها ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="floating-hearts" id="floatingHearts"></div>
+
+  <!-- الشاشة الأولى -->
+  <section id="intro" class="screen active">
+    <div class="sparkle">✧</div>
+    <div class="heart-wrap">
+      <button class="big-heart" id="enterButton" aria-label="افتحي عالمنا">
+        ♥
+      </button>
+    </div>
+    <p class="eyebrow">A LITTLE WORLD MADE FOR YOU</p>
+    <h1>لدلوعتي <span>وحدها</span></h1>
+    <p class="intro-text">
+      فيه عالم صغير مستنيكي...<br>
+      جواه حاجات كتير بتفكرني بيكي.
+    </p>
+    <button class="main-btn" id="enterTextButton">
+      افتحي عالمنا ♡
+    </button>
+    <p class="small-note">كل تفصيلة هنا معمولة علشانك ❤️</p>
+  </section>
+
+  <!-- الموقع الرئيسي -->
+  <section id="home" class="screen">
+    <header class="topbar">
+      <div class="logo">♥ دلوعتي</div>
+      <button class="music-mini" id="topMusic">♫ أغنيتنا</button>
+    </header>
+
+    <div class="welcome">
+      <p class="eyebrow">OUR LITTLE CORNER</p>
+      <h2>أهلًا بيكي في <span>عالمنا</span></h2>
+      <p>هنا شوية لحظات صغيرة... بس مكانها كبير أوي عندي.</p>
+    </div>
+
+    <!-- حيطة الذكريات -->
+    <section class="content-section">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">LITTLE MOMENTS, BIG FEELINGS</p>
+          <h2>حيطة ذكرياتنا 📸</h2>
+        </div>
+        <span class="decoration">♡</span>
+      </div>
+      <p class="hint">دوسي على أي صورة علشان تشوفيها أقرب.</p>
+      <div class="memory-wall" id="memoryWall"></div>
+    </section>
+
+    <!-- ألبوم الصور -->
+    <section class="content-section">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">OUR STORY IN PICTURES</p>
+          <h2>ألبومنا الصغير</h2>
+        </div>
+        <span class="decoration">✿</span>
+      </div>
+      <p class="hint">كل صورة ليها حكاية... حتى لو كانت مجرد ضحكة.</p>
+
+      <div class="album">
+        <button class="album-arrow" id="prevPhoto" aria-label="الصورة السابقة">‹</button>
+        <div class="album-page">
+          <div class="album-photo" id="albumPhoto"></div>
+          <p id="albumCaption">أحلى ذكرى ❤️</p>
+          <div class="counter" id="albumCounter">01 / 12</div>
+        </div>
+        <button class="album-arrow" id="nextPhoto" aria-label="الصورة التالية">›</button>
+      </div>
+      <div class="dots" id="albumDots"></div>
+    </section>
+
+    <!-- الأغنية -->
+    <section class="content-section song-card">
+      <div class="song-art">
+        <span>♥</span>
+        <div class="vinyl">♫</div>
+      </div>
+      <div class="song-details">
+        <p class="eyebrow">OUR SONG</p>
+        <h2>عمرنا ما هنبعد</h2>
+        <p>بهاء سلطان</p>
+        <p class="song-quote">
+          دي أغنيتنا اللي هتفضل تفكرني بأحلى أيامنا سوا. ♡
+        </p>
+        <div class="audio-controls">
+          <button id="playSong" aria-label="تشغيل الأغنية">▶</button>
+          <div class="track-area">
+            <div class="track"><span id="progress"></span></div>
+            <div class="times">
+              <span id="currentTime">0:00</span>
+              <span id="duration">0:00</span>
+            </div>
+          </div>
+        </div>
+        <p class="audio-hint" id="audioHint">
+          ضيف ملف الأغنية داخل مجلد audio علشان تشتغل.
+        </p>
+        <audio id="ourSong" preload="metadata" autoplay >
+          <source src="assets/audio/song.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </section>
+
+    <!-- الرسالة -->
+    <section class="letter-invitation">
+      <div class="letter-icon">💌</div>
+      <p class="eyebrow">ONE LAST LITTLE THING</p>
+      <h2>لسه فيه كلام من قلبي ليكي...</h2>
+      <p>رسالة صغيرة مستنياكي في آخر الحكاية.</p>
+      <button class="main-btn" id="openLetter">افتحي رسالتي 💗</button>
+    </section>
+
+    <footer>اتعمل بحب... علشان دلوعتي وحدها ♥</footer>
+  </section>
+
+  <!-- شاشة الرسالة -->
+  <section id="letterScreen" class="screen letter-screen">
+    <button class="back-btn" id="backToHome">→ رجوع لذكرياتنا</button>
+
+    <div class="envelope-area">
+      <div class="envelope" id="envelope">
+        <div class="envelope-back"></div>
+        <div class="envelope-flap"></div>
+        <div class="envelope-paper">♥<br>من قلبي ليكي</div>
+        <div class="envelope-front"></div>
+      </div>
+      <button class="main-btn" id="openEnvelope">
+        افتحي الجواب يا دلوعتي 💌
+      </button>
+    </div>
+
+    <article class="letter-paper hidden" id="letterPaper">
+      <p class="eyebrow">A LETTER JUST FOR YOU</p>
+      <h2>يا دلوعتي الحلوة، ❤️</h2>
+
+      <div class="letter-body">
+        <p>
+          في كلام كتير جوايا نفسي أقولهولك، بس ساعات بحس إن الكلام
+          مهما كان حلو مش هيعرف يوصف مكانتك عندي.
+        </p>
+        <p>
+          كل صورة هنا وراها لحظة بحب أفتكرها، وكل تفصيلة صغيرة
+          بتفكرني إن أجمل الحاجات مش لازم تكون كبيرة...
+          ساعات بتكون ضحكة منك، أو كلمة، أو وقت قضيناه سوا.
+        </p>
+        <p>
+          والرسالة دي لسه ليها باقي، هنكتبه من حكايتنا الحقيقية،
+          علشان كل كلمة فيها تبقى طالعة من قلبي ليكي.
+        </p>
+      </div>
+
+      <p class="signature">من قلبي لقلبك ♥</p>
+      <button class="main-btn" id="backFromLetter">نرجع لذكرياتنا ❤️</button>
+    </article>
+  </section>
+
+  <!-- عرض الصورة بالحجم الكبير -->
+  <div class="lightbox hidden" id="lightbox">
+    <button class="close-lightbox" id="closeLightbox" aria-label="إغلاق">×</button>
+    <button class="album-arrow" id="lightPrev" aria-label="الصورة السابقة">‹</button>
+    <div class="lightbox-card">
+      <img id="lightboxImage" src="" alt="ذكرى من ذكرياتنا">
+      <p id="lightboxCaption"></p>
+    </div>
+    <button class="album-arrow" id="lightNext" aria-label="الصورة التالية">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
